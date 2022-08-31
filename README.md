@@ -53,15 +53,23 @@ sudo service iwd restart
 # Configure iwd with iwctl. Run iwctl by your normal user not root
 iwctl
 
-#################################################################
+- - -
 # Audio Configuration
 #################################################################
 # Install wireplumber pipewire-pulse
-sudo nala install wireplumber pipewire-pulse
+sudo apt install wireplumber pipewire-pulse pulseaudio-utils pipewire-audio-client-libraries libspa-0.2-jack libspa-0.2-bluetooth bluez-y
 
-# Enable wireplumber service as your normal user
 systemctl --user --now enable wireplumber.service
 systemctl --user --now enable pipewire-pulse.service
+sudo reboot
+
+LANG=C pactl info | grep '^Server Name'
+
+sudo cp /usr/share/doc/pipewire/examples/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d/
+
+sudo cp cp /usr/share/doc/pipewire/examples/ld.so.conf.d/pipewire-jack-*.conf /etc/ld.so.conf.d/
+
+sudo ldconfig
 
 ##################################################################
 # Display Manager
