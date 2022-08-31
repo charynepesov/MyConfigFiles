@@ -1,13 +1,13 @@
 # MyConfigFiles - v0.01 alpha
 - - -
-# My Debian testing installation
-# Install base debian with expert install. On software selection uncheck Gnome.
-# Reboot
-# Login with root user if you did not disabled that earlier
+## My Debian testing installation
+Install base debian with expert install. On software selection uncheck Gnome.
+Reboot
+Login with root user if you did not disabled that earlier
 su -
 
-# Give sudo for regular user.
-# https://wiki.debian.org/sudo/
+Give sudo for regular user.
+[https://wiki.debian.org/sudo/]
 apt install sudo
 adduser your_username_here sudo
 
@@ -19,7 +19,7 @@ sudo apt install nala
 
 - - -
 # Configure your network
-- - -
+
 # https://wiki.debian.org/NetworkConfiguration
 # Check your network device list
 ls /sys/class/net
