@@ -1,5 +1,5 @@
 # MyConfigFiles - v0.01 alpha
-
+- - -
 # My Debian testing installation
 # Install base debian with expert install. On software selection uncheck Gnome.
 # Reboot
@@ -17,9 +17,9 @@ sudo apt install nala
 # Install firmware-linux for drivers
 5. sudo nala update && sudo nala install firmware-linux
 
-##############################################################
+- - -
 # Configure your network
-##############################################################
+- - -
 # https://wiki.debian.org/NetworkConfiguration
 # Check your network device list
 ls /sys/class/net
